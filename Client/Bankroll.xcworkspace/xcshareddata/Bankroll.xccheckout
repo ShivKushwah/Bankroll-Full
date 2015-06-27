@@ -10,6 +10,8 @@
 	<string>Bankroll</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>356BA9B732EC1C4DDCAB2C472D020BD85D530A5B</key>
+		<string>https://github.com/ShivKushwah/Bankroll-Full.git</string>
 		<key>5BC69DBDF707E3619953C377111F9CDB2D166E7E</key>
 		<string>https://github.com/ad1269/Bankroll.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>Client/Bankroll.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5BC69DBDF707E3619953C377111F9CDB2D166E7E</key>
+		<key>356BA9B732EC1C4DDCAB2C472D020BD85D530A5B</key>
 		<string>../..</string>
+		<key>5BC69DBDF707E3619953C377111F9CDB2D166E7E</key>
+		<string>../../../Bankroll</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/ad1269/Bankroll.git</string>
+	<string>https://github.com/ShivKushwah/Bankroll-Full.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5BC69DBDF707E3619953C377111F9CDB2D166E7E</string>
+	<string>356BA9B732EC1C4DDCAB2C472D020BD85D530A5B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>5BC69DBDF707E3619953C377111F9CDB2D166E7E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Bankroll</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>356BA9B732EC1C4DDCAB2C472D020BD85D530A5B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Bankroll-Full</string>
 		</dict>
 	</array>
 </dict>
