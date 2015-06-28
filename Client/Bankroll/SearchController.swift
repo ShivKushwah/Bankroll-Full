@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol DisplaySearchDelegate {
+    func selected(user : User)
+}
+
 class SearchController: UITableViewController, UISearchBarDelegate, UITableViewDelegate {
     
     @IBOutlet var segment: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var delegate : DisplaySearchDelegate?
+    
     var searchActive : Bool = false
-    var data = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin", "Seattle"]
+    var data: [String] = ["San Francisco","New York","San Jose","Chicago","Los Angeles","Austin", "Seattle"]
+    var userArray : [User] = [User]()
+    var placeArray : [String] = [String]()
+    
     var filtered:[String] = []
     
     override func viewDidLoad() {
@@ -25,6 +34,7 @@ class SearchController: UITableViewController, UISearchBarDelegate, UITableViewD
         self.tableView.dataSource = self
         searchBar.delegate = self
         
+        userArray = [User(),User(),User(),User(),User(),User(),User(),User()]
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,6 +88,11 @@ class SearchController: UITableViewController, UISearchBarDelegate, UITableViewD
         return data.count;
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("called 1")
+        self.delegate?.selected(userArray[indexPath.row])
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell;
         if(searchActive){
@@ -89,12 +104,22 @@ class SearchController: UITableViewController, UISearchBarDelegate, UITableViewD
         return cell;
     }
     
+    func getUsernames(users : [User]) -> [String] {
+        var dat : [String] = [String]()
+        for user in users {
+            dat.append(user.username)
+        }
+        return dat
+    }
+    
     func searchFriends() {
-        
+        self.data = self.getUsernames(userArray)
+        self.tableView.reloadData()
     }
     
     func searchPlaces() {
-        
+        self.data = self.placeArray
+        self.tableView.reloadData()
     }
     
     @IBAction func switchView(sender: UISegmentedControl!) {

@@ -31,7 +31,7 @@ class ACLocation : NSObject, CLLocationManagerDelegate {
         return currentAddress
     }
     
-    func displayLocationInfo(placemark : CLPlacemark) {
+    private func displayLocationInfo(placemark : CLPlacemark) {
         currentAddress = placemark
         self.locationManager.stopUpdatingLocation()
     }

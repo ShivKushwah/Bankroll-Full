@@ -11,8 +11,9 @@ import UIKit
 
 class User {
     //Add more variables if needed
-    var username : String?
+    var username : String = ""
     var profilePic : UIImage?
+    var friends = [User]()
     
     func randomStringWithLength (len : Int) -> NSString {
         

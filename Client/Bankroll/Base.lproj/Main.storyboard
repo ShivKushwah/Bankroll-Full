@@ -345,6 +345,24 @@
             </objects>
             <point key="canvasLocation" x="3187" y="-218"/>
         </scene>
+        <!--Display Info Controller-->
+        <scene sceneID="tPH-XJ-CDk">
+            <objects>
+                <viewController id="xeK-3N-nO9" customClass="DisplayInfoController" customModule="Bankroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FiG-h8-w3p"/>
+                        <viewControllerLayoutGuide type="bottom" id="c3U-29-1C1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="esu-Y7-4jw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukg-s8-Qhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3187" y="446"/>
+        </scene>
         <!--Home Controller-->
         <scene sceneID="nFx-pB-zEA">
             <objects>
@@ -517,11 +535,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-eP-Zre">
-                                <rect key="frame" x="136" y="274" width="448" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnh-QI-det">
                                 <rect key="frame" x="29" y="353" width="79" height="20.5"/>
                                 <constraints>
@@ -639,6 +652,11 @@
                                     <action selector="cancel:" destination="vCG-Pf-YYv" eventType="touchUpInside" id="QmU-Ii-up0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNU-eP-Zre">
+                                <rect key="frame" x="136" y="274" width="448" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -807,10 +825,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="dobField" destination="dNU-eP-Zre" id="3eW-vB-ce1"/>
+                        <outlet property="dobField" destination="fbI-QW-TFw" id="e0j-jS-FyU"/>
                         <outlet property="emailField" destination="5Wb-ZF-erl" id="X7G-xs-G5x"/>
                         <outlet property="nameField" destination="Fw6-pV-amG" id="3Xm-u9-HxY"/>
                         <outlet property="passField" destination="9cE-tt-yoq" id="3xL-lm-Ach"/>
+                        <outlet property="phoneNumber" destination="dNU-eP-Zre" id="tFW-xa-BLZ"/>
                         <outlet property="userField" destination="Wt2-bX-2Lt" id="8go-jM-GRP"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="cancelSegue" id="cRM-8a-r6G"/>
                         <segue destination="MHA-Td-9eH" kind="presentation" identifier="signupSegue" id="C5K-QQ-EaO"/>
@@ -954,6 +973,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOR-H3-hTy" id="aPL-UN-FOF">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xeK-3N-nO9" kind="presentation" identifier="displayInfoSegue" id="TVS-vL-9KI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -970,11 +992,15 @@
                                 <segment title="Places"/>
                                 <segment title="Friends"/>
                             </segments>
+                            <connections>
+                                <action selector="switchView:" destination="SGD-BP-RAq" eventType="valueChanged" id="Gs5-zR-unt"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="yRw-rS-5iz" id="uQm-NX-2Mk"/>
                         <outlet property="searchDisplayController" destination="DWx-fJ-yP2" id="8rj-Fr-g1T"/>
+                        <outlet property="segment" destination="bn5-8R-DNT" id="KXF-yd-KOJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxw-r8-DRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1056,6 +1082,6 @@
         <image name="overlay.png" width="1024" height="356"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ybB-B1-UaQ"/>
+        <segue reference="C5K-QQ-EaO"/>
     </inferredMetricsTieBreakers>
 </document>

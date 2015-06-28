@@ -1,23 +1,28 @@
 //
-//  ProfileController.swift
+//  DisplayInfoController.swift
 //  Bankroll
 //
-//  Created by Mohan Lakshmanan on 6/17/15.
+//  Created by Shivendra Kushwah on 6/28/15.
 //  Copyright (c) 2015 AD. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ProfileController: UIViewController {
+class DisplayInfoController: UIViewController, DisplaySearchDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
+    
+    func selected(user: User) {
+        println("called")
+        println(user.username)
+    }
+    
 }

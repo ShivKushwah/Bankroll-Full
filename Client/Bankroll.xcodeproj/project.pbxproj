@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B820881B40B9F8000A2B77 /* DisplayInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B820871B40B9F8000A2B77 /* DisplayInfoController.swift */; };
 		58C2C8AB1B3F655B0033F226 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C8A31B3F655B0033F226 /* Alamofire.swift */; };
 		58C2C8AC1B3F655B0033F226 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C8A41B3F655B0033F226 /* Download.swift */; };
 		58C2C8AD1B3F655B0033F226 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C8A51B3F655B0033F226 /* Manager.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58B820871B40B9F8000A2B77 /* DisplayInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayInfoController.swift; sourceTree = "<group>"; };
 		58C2C8A21B3F655B0033F226 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
 		58C2C8A31B3F655B0033F226 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		58C2C8A41B3F655B0033F226 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				6BA14CAF1B31EAEE003C7948 /* HomeController.swift */,
 				6B15A3591B3CCE54001E1146 /* NewPostViewController.swift */,
 				6BA14CB11B31F048003C7948 /* SearchController.swift */,
+				58B820871B40B9F8000A2B77 /* DisplayInfoController.swift */,
 				6BA14CB51B31F6F3003C7948 /* PictureController.swift */,
 				6B304AE11B32297C0060424E /* LaunchPic.swift */,
 				6BA14CB71B31F705003C7948 /* ProfileController.swift */,
@@ -514,6 +517,7 @@
 				6B24BF941ABE781B00BB5AD9 /* SignUpController.swift in Sources */,
 				6BA14CB81B31F705003C7948 /* ProfileController.swift in Sources */,
 				6B8E51FE1B3B1702003F6F60 /* Post.swift in Sources */,
+				58B820881B40B9F8000A2B77 /* DisplayInfoController.swift in Sources */,
 				58C2C8AF1B3F655B0033F226 /* Request.swift in Sources */,
 				6B8E52021B3B781F003F6F60 /* User.swift in Sources */,
 				6B15A3581B3CC8E2001E1146 /* PostCell.swift in Sources */,
